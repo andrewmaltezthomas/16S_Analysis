@@ -23,7 +23,7 @@ sample_mapping.close()
 # Edit directories
 fastq_dir = args.fastq_dir
 working_directory = args.working_dir
-scripts_directory = args.script_dir
+script_directory = args.script_dir
 
 def write_report(sample):
         total_seqs = int(subprocess.check_output("wc -l " + fastq_dir + sample_files[key][0], shell = True).rstrip().split()[0]) / 4
