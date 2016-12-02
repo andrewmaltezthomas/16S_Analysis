@@ -7,7 +7,7 @@
 
 #### Notes:
 * Assumes that Qiime executable is in "/usr/bin/qiime". If not, change this in the script. 
-* Assumes that the primer pair is Forward: CCTACGGGNGGCWGCAG and Reverse: GACTACHVGGGTATCTAATCC
+* Assumes that the primer pair is Forward: CCTACGGGNGGCWGCAG and Reverse: GACTACHVGGGTATCTAATCC. If not, change this in the file Utilities/Amplicon.map. 
 
 Sequence_Filtering.py - Will join V4-V5 16S paired-end MiSeq reads using fastq-join, filter by quality, primer mismatches, homopolymers and size. A report is generated at the end showing numbers for each filter. 
 
