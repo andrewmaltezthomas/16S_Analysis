@@ -1,4 +1,4 @@
-# 16S Pre-processing using Illumina MiSeq reads and UPARSE
+# 16S rRNA pre-processing of Illumina MiSeq reads
 
 #### Dependencies:
 * Qiime (version >= 1.7.0)
@@ -31,4 +31,4 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 * Assumes that the primer pair is Forward: CCTACGGGNGGCWGCAG and Reverse: GACTACHVGGGTATCTAATCC. 
 **If not, change this in the script.**
 
-**alternative_sequence_filtering.py** - Will filter reads by average quality (default 20) using prinseq, merge paired-end reads using PEAR, trim the 16S primers using cutadapt (allowing a maximum of 2 mismatches) and filter by size (minimum 300nt).  
+**alternative_sequence_filtering.py** - Will filter reads by average quality (default 20) using prinseq, merge paired-end reads using PEAR, trim the 16S primers using cutadapt (allowing a maximum of 2 mismatches) and filter by size (minimum 300nt). A report is generated at the end showing numbers for each filter. 
