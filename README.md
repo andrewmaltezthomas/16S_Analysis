@@ -32,4 +32,17 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 * Assumes that the primer pair is Forward: CCTACGGGNGGCWGCAG and Reverse: GACTACHVGGGTATCTAATCC. 
 **If not, change this in the script.**
 
-**alternative_sequence_filtering.py** - Will filter reads by average quality (default 20) using prinseq, merge paired-end reads using PEAR, trim the 16S primers using cutadapt (allowing a maximum of 2 mismatches) and filter by size (minimum 300nt). A report is generated at the end showing numbers for each filter. 
+**alternative_sequence_filtering.py** - Will filter reads by average quality (default 20) using prinseq, merge paired-end reads using PEAR, trim the 16S primers using cutadapt (allowing a maximum of 2 mismatches) and filter by size (minimum 300nt). A report is generated at the end showing numbers for each filter.
+
+## Mothur V4 MiSeq SOP script
+
+#### Dependencies:
+* mothur (version >= )
+
+### Notes:
+* Download the [Silva database](https://www.mothur.org/w/images/9/98/Silva.bacteria.zip) and the [RDP training set](https://www.mothur.org/w/images/5/59/Trainset9_032012.pds.zip). 
+* Assumes that 16s primers haven't been trimmed. 
+
+For more information on the methods and specific command calls see the [SOP](https://www.mothur.org/wiki/MiSeq_SOP). 
+
+
