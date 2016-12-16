@@ -1,5 +1,7 @@
 # 16S rRNA pre-processing of Illumina MiSeq reads
 
+## Sequence filtering and clustering using *Qiime* and *UPARSE* 
+
 #### Dependencies:
 * Qiime (version >= 1.7.0)
 * USEARCH (version >= 9.0)
@@ -41,7 +43,7 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 
 ### Notes:
 * Download the [Silva database](https://www.mothur.org/w/images/9/98/Silva.bacteria.zip) and the [RDP training set](https://www.mothur.org/w/images/5/59/Trainset9_032012.pds.zip). 
-* Assumes that 16s primers haven't been trimmed. 
+* Assumes that 16S primers haven't been trimmed. 
 
 For more information on the methods and specific command calls see the [SOP](https://www.mothur.org/wiki/MiSeq_SOP). 
 

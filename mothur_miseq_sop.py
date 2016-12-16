@@ -4,7 +4,7 @@ import argparse
 from argparse import RawTextHelpFormatter
 __author__ = 'Andrew Thomas'
  
-parser = argparse.ArgumentParser(description='This is the a script to analyze V4 16S amplicon data using the mothur MiSeq SOP by Andrew Thomas.\nExample usage:\npython mothur_miseq_sop.py -fq /work/data/ -wd /work/ -s samples.txt -oligos Oligos.txt\nThe sample-file mapping should be as follows:\nOct_12\tZLAM0113IQMSIPE01R01R1.fastq\tZLAM0113IQMSIPE01R01R2.fastq\n', formatter_class=RawTextHelpFormatter)
+parser = argparse.ArgumentParser(description='This is a script to analyze V4 16S amplicon data using the mothur MiSeq SOP by Andrew Thomas.\nExample usage:\npython mothur_miseq_sop.py -fq /work/data/ -wd /work/ -s samples.txt -oligos Oligos.txt\nThe sample-file mapping should be as follows:\nOct_12\tZLAM0113IQMSIPE01R01R1.fastq\tZLAM0113IQMSIPE01R01R2.fastq\n', formatter_class=RawTextHelpFormatter)
 parser.add_argument('-fq','--fastq_dir', help="Absolute fastq input file directory",required=True)
 parser.add_argument('-wd','--working_dir',help='Absolute working directory', required=True)
 parser.add_argument('-s','--sample_mapping',help='Mapping of sample names to file names', required=True)
