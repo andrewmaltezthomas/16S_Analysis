@@ -30,8 +30,8 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 
 ### Notes:
 * Assumes that pear is called as "pear-merger". **If not, change this in the script.**
-* By default, reads are quality filtered using an average phred-like quality of 20. **If not, change this in the script.**
-* Assumes that the primer pair is Forward: CCTACGGGNGGCWGCAG and Reverse: GACTACHVGGGTATCTAATCC. 
+* By default, reads are quality filtered using an average *phred-like* quality of 20. **If not, change this in the script.**
+* Assumes that the primer pair is Forward: CCTACGGGRSGCAGCAG and Reverse: ATTAGAWACCCVHGTAGTCC. 
 **If not, change this in the script.**
 
 **alternative_sequence_filtering.py** - Will filter reads by average quality (default 20) using prinseq, merge paired-end reads using PEAR, trim the 16S primers using cutadapt (allowing a maximum of 2 mismatches) and filter by size (minimum 300nt). A report is generated at the end showing numbers for each filter.
