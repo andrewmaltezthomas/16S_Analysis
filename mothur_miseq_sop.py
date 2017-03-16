@@ -111,11 +111,11 @@ subprocess.call("mothur '# classify.seqs(fasta=merged.good.unique.good.filter.un
 
 subprocess.call("mothur '# remove.lineage(fasta=merged.good.unique.good.filter.unique.precluster.pick.fasta, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)'", shell = True)
 
-subprocess.call("mothur '# cluster.split(fasta=merged.good.unique.good.filter.unique.precluster.pick.pick.fasta, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.15, processors=8)'", shell = True)
+subprocess.call("mothur '# cluster.split(fasta=merged.good.unique.good.filter.unique.precluster.pick.pick.fasta, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=4, cutoff=0.03, processors=8)'", shell = True)
 
-subprocess.call("mothur '# make.shared(list=merged.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.list, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)'", shell = True)
+subprocess.call("mothur '# make.shared(list=merged.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.unique_list.list, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, label=0.03)'", shell = True)
 
-subprocess.call("mothur '# classify.otu(list=merged.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.list, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)'", shell = True)
+subprocess.call("mothur '# classify.otu(list=merged.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.unique_list.list, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.count_table, taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)'", shell = True)
 
 subprocess.call("mothur '# phylotype(taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy)'", shell = True)
 
@@ -123,9 +123,9 @@ subprocess.call("mothur '# make.shared(list=merged.good.unique.good.filter.uniqu
 
 subprocess.call("mothur '# classify.otu(list=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.list, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, taxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=1)'", shell = True)
 
-subprocess.call("mothur '# make.biom(shared=merged.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.shared, constaxonomy=merged.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.cons.taxonomy)'", shell = True)
+subprocess.call("mothur '# make.biom(shared=merged.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.unique_list.shared, constaxonomy=merged.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.unique_list.0.03.cons.taxonomy)'", shell = True)
 
-subprocess.call("mv merged.good.unique.good.filter.unique.precluster.pick.pick.an.unique_list.0.03.biom mothur.OTUbased.table.biom", shell = True)
+subprocess.call("mv merged.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.unique_list.0.03.biom  mothur.OTUbased.table.biom", shell = True)
 
 print "Making OTU table..."
 subprocess.call("mothur '# make.biom(shared=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.shared, constaxonomy=merged.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.tx.1.cons.taxonomy)'", shell = True)
@@ -139,8 +139,6 @@ subprocess.call("mothur '# dist.seqs(fasta=merged.good.unique.good.filter.unique
 
 subprocess.call("mothur '# clearcut(phylip=merged.good.unique.good.filter.unique.precluster.pick.pick.phylip.dist)'", shell = True)
 
-subprocess.call("mothur '# mothur '# unifrac.weighted(tree=merged.good.unique.good.filter.unique.precluster.pick.pick.phylip.tre, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, subsample=T, distance=square)'", shell = True)
+subprocess.call("mothur '# unifrac.weighted(tree=merged.good.unique.good.filter.unique.precluster.pick.pick.phylip.tre, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, subsample=T, distance=square)'", shell = True)
 
-subprocess.call("mothur '# mothur '# unifrac.unweighted(tree=merged.good.unique.good.filter.unique.precluster.pick.pick.phylip.tre, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, subsample=T, distance=square)'", shell = True)
-
-
+subprocess.call("mothur '# unifrac.unweighted(tree=merged.good.unique.good.filter.unique.precluster.pick.pick.phylip.tre, count=merged.good.unique.good.filter.unique.precluster.denovo.uchime.pick.pick.count_table, subsample=T, distance=square)'", shell = True)
