@@ -4,7 +4,7 @@
 
 #### Dependencies:
 * Qiime (version >= 1.7.0)
-* USEARCH (version >= 9.0)
+* USEARCH (version 9.0)
 * Fastq-join (version >= 1.1.2)
 * Python (version 2.7)
 * Perl (version >= 5.18.2)
