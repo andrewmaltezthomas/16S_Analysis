@@ -39,7 +39,7 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 ## Mothur V4 MiSeq SOP script
 
 #### Dependencies:
-* mothur (version >= )
+* mothur (version v.1.39.4)
 
 ### Notes:
 * Download the [Silva database](https://www.mothur.org/w/images/9/98/Silva.bacteria.zip) and the [RDP training set](https://www.mothur.org/w/images/5/59/Trainset9_032012.pds.zip). 
