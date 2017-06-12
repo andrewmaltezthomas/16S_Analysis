@@ -2,13 +2,13 @@
 
 ## Sequence filtering and clustering using *Qiime* and *UPARSE* 
 
-#### Dependencies:
-* Qiime (version >= 1.7.0)
+#### Dependencies (tested on):
+* Qiime (version 1.7.0)
 * USEARCH (version 9.0)
-* Fastq-join (version >= 1.1.2)
-* Python (version 2.7)
-* Perl (version >= 5.18.2)
-* Fastx Toolkit (version >= 0.0.14-1)
+* Fastq-join (version 1.1.2)
+* Python (2.7)
+* Perl (version 5.18.2)
+* Fastx Toolkit (version 0.0.14)
 
 #### Notes:
 * Assumes that Qiime executable is in "/usr/bin/qiime". **If not, change this in the script.** 
@@ -23,10 +23,10 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 
 ## Alternative sequence filtering pipeline
 
-#### Dependencies:
-* Prinseq-lite (version )
-* PEAR (Paired-end reAd mergeR - version )
-* cutadapt (version )
+#### Dependencies (tested on):
+* Prinseq-lite (version 0.20.4)
+* PEAR (Paired-end reAd mergeR - version 0.9.10)
+* cutadapt (version 1.12)
 
 ### Notes:
 * Assumes that pear is called as "pear-merger". **If not, change this in the script.**
@@ -36,10 +36,10 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 
 **alternative_sequence_filtering.py** - Will filter reads by average quality (default 20) using prinseq, merge paired-end reads using PEAR, trim the 16S primers using cutadapt (allowing a maximum of 2 mismatches) and filter by size (minimum 300nt). A report is generated at the end showing numbers for each filter.
 
-## Mothur V4 MiSeq SOP script
+## Mothur V4 MiSeq SOP script (accessed on Jan-2017)
 
-#### Dependencies:
-* mothur (version v.1.39.4)
+#### Dependencies (tested on):
+* mothur (version 1.39.4)
 
 ### Notes:
 * Download the [Silva database](https://www.mothur.org/w/images/9/98/Silva.bacteria.zip) and the [RDP training set](https://www.mothur.org/w/images/5/59/Trainset9_032012.pds.zip). 
