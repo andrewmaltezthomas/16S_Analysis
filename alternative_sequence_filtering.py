@@ -60,9 +60,9 @@ for key in sample_files:
 	merged_reads = int(subprocess.check_output("wc -l PEAR/" + key + ".assembled.fastq", shell = True).rstrip().split()[0]) / 4
 
 	print "Trimming primers for " + key
-	p3 = subprocess.Popen("cutadapt -g CCTACGGGRSGCAGCAG$ --discard-untrimmed -e 0.12 PEAR/" + key + ".assembled.fastq > " + key + ".Ftrim.fastq 2> " + key + ".Ftrim.report.txt", shell = True)
+	p3 = subprocess.Popen("cutadapt -g ^CCTACGGGRSGCAGCAG --discard-untrimmed -e 0.12 PEAR/" + key + ".assembled.fastq > " + key + ".Ftrim.fastq 2> " + key + ".Ftrim.report.txt", shell = True)
 	p3.wait()
-	p3 = subprocess.Popen("cutadapt -a ATTAGAWACCCVHGTAGTCC$ --minimum-length 300 --discard-untrimmed -e 0.1 " + key + ".Ftrim.fastq > " + key + ".Primer.Trim.fastq 2> " + key + ".Rtrim.report.txt", shell = True)
+	p3 = subprocess.Popen("cutadapt -a ATTAGAWACCCDBGTAGTCC$ --minimum-length 300 --discard-untrimmed -e 0.1 " + key + ".Ftrim.fastq > " + key + ".Primer.Trim.fastq 2> " + key + ".Rtrim.report.txt", shell = True)
 	p3.wait()
 	subprocess.call("rm *.Ftrim.fastq", shell = True)
 	primer_trimmed_reads = int(subprocess.check_output("wc -l " + key + ".Primer.Trim.fastq", shell = True).rstrip().split()[0]) / 4
