@@ -9,7 +9,7 @@
 * Python (2.7)
 * Perl (version 5.18.2)
 * Fastx Toolkit (version 0.0.14)
-* Biom[http://biom-format.org/index.html]
+* [Biom](http://biom-format.org/index.html)
 
 #### Notes:
 * Assumes that Qiime executable is in "/usr/bin/qiime". **If not, change this in the script.** 
