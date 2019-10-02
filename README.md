@@ -50,7 +50,7 @@ For more information on the methods, see [Antunes et al. 2016](http://www.nature
 
 For more information on the methods and specific command calls see the [SOP](https://www.mothur.org/wiki/MiSeq_SOP). 
 
-## Alternative 3 -dada2 pipeline in snakemake
+## Alternative 3 - dada2 pipeline in snakemake
 
 COMING SOON
 
